@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/default_profile"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:contentDescription="Profile Picture" />
+
+        <!-- Upload Image Button -->
+        <Button
+            android:id="@+id/uploadProfileImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:textAllCaps="false"
+            android:elevation="2dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/userEmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Email"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2C2C2C"
+            android:layout_marginBottom="24dp" />
+
+        <!-- User Name -->
+        <EditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:background="@drawable/edittext_background"
+            android:padding="14dp"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bio -->
+        <EditText
+            android:id="@+id/bioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a short bio"
+            android:background="@drawable/edittext_background"
+            android:padding="14dp"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Resume Info -->
+        <TextView
+            android:id="@+id/resumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Resume Uploaded"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Upload Resume Button -->
+        <Button
+            android:id="@+id/uploadResumeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Resume (PDF)"
+            android:textAllCaps="false"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Save Changes -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:textAllCaps="false"
+            android:backgroundTint="#43A047"
+            android:textColor="#FFFFFF"
+            android:elevation="3dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:backgroundTint="#E53935"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp" />
+    </LinearLayout>
+</ScrollView>

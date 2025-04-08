@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User 👋"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2C2C2C"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search for jobs"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="14dp"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Job Categories (Chips) -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/categoryRemote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remote"
+                    android:backgroundTint="#E0E0E0"
+                    android:textColor="#2C2C2C"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/categoryInternship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Internships"
+                    android:backgroundTint="#E0E0E0"
+                    android:textColor="#2C2C2C"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/categoryFullTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full-time"
+                    android:backgroundTint="#E0E0E0"
+                    android:textColor="#2C2C2C"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Job List Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently Posted Jobs"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2C2C2C"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Job List RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jobRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Quick Access Button (Profile/Settings/Saved) -->
+        <Button
+            android:id="@+id/actionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Profile"
+            android:textAllCaps="false"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:elevation="3dp"
+            android:layout_marginBottom="12dp" />
+    </LinearLayout>
+</ScrollView>
